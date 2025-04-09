@@ -1,0 +1,108 @@
+<script>
+  //maintain list of all floors
+  const floors = {
+    floor1: {
+      image: "/images/ANN Lower Level.png",
+      svg: "/images/ANN Lower Level.svg",
+    },
+    floor2: {
+      image: "/images/ANN First Floor.png",
+      svg: "/images/ANN First Floor.svg",
+    },
+    floor3: {
+      image: "/images/ANN Second Floor.png",
+      svg: "/images/ANN Second Floor.svg",
+    },
+    floor4: {
+      image: "/images/ANN Third Floor.png",
+      svg: "/images/ANN Third Floor.svg",
+    },
+    floor5: {
+      image: "/images/ANN Fourth Floor.png",
+      svg: "/images/ANN Fourth Floor.svg",
+    },
+    ascfloor1: {
+      image: "/images/ASC Ground.png",
+      svg: "/images/ASC Ground.svg",
+    },
+    ascfloor2: {
+      image: "/images/ASC First Floor.png",
+      svg: "/images/ASC First Floor.svg",
+    },
+    ascfloor3: {
+      image: "/images/ASC Second Floor.png",
+      svg: "/images/ASC Second Floor.svg",
+    },
+    ascfloor4: {
+      image: "/images/ASC Third Floor.png",
+      svg: "/images/ASC Third Floor.svg",
+    },
+  };
+</script>
+
+<link rel="stylesheet" href="styles.css" />
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style src="style.css"></style>
+    <script src="script.js"></script>
+    <title>Interactive Floorplan</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="section">
+        <h3>ANN Floors</h3>
+        <a href="#floor1" class="floor-tab" data-floor="floor1"
+          >ANN Lower Level</a
+        >
+        <a href="#floor2" class="floor-tab" data-floor="floor2"
+          >ANN First Floor</a
+        >
+        <a href="#floor3" class="floor-tab" data-floor="floor3"
+          >ANN Second Floor</a
+        >
+        <a href="#floor4" class="floor-tab" data-floor="floor4"
+          >ANN Third Floor</a
+        >
+        <a href="#floor5" class="floor-tab" data-floor="floor5"
+          >ANN Fourth Floor</a
+        >
+      </div>
+      <div class="section">
+        <h3>ASC Floors</h3>
+        <a href="#ascfloor1" class="floor-tab" data-floor="ascfloor1"
+          >ASC Ground</a
+        >
+        <a href="#ascfloor2" class="floor-tab" data-floor="ascfloor2"
+          >ASC First Floor</a
+        >
+        <a href="#ascfloor3" class="floor-tab" data-floor="ascfloor3"
+          >ASC Second Floor</a
+        >
+        <a href="#ascfloor4" class="floor-tab" data-floor="ascfloor4"
+          >ASC Third Floor</a
+        >
+      </div>
+    </nav>
+    <div class="content">
+      <div class="image-container">
+        <img src="/images/ANN Lower Level.png" , />
+
+        <object
+          id="svg-object"
+          type="image/svg+xml"
+          data="/images/ANN Lower Level.svg"
+          ,
+          class="overlay-svg invisible"
+        >
+          Your browser does not support SVG
+        </object>
+      </div>
+      <div class="toggle-container" id="toggle-container"></div>
+    </div>
+  </body>
+</html>
+
+<script src="script.js"></script>
